@@ -14,9 +14,8 @@
 .heroLogo {
   width: 96px;
   height: 96px;
-  border-radius: 20px;
   margin-bottom: 1.25rem;
-  box-shadow: 0 8px 24px rgba(0, 60, 70, 0.18);
+  filter: drop-shadow(0 8px 20px rgba(0, 60, 70, 0.25));
 }
 
 .heroTitle {

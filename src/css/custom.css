@@ -116,10 +116,6 @@
   letter-spacing: -0.01em;
 }
 
-.navbar__logo img {
-  border-radius: 6px;
-}
-
 .footer--dark {
   --ifm-footer-background-color: oklch(0.21 0.018 207);
 }

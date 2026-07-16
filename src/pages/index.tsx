@@ -50,7 +50,7 @@ function HomepageHeader() {
       <div className="container">
         <img
           className={styles.heroLogo}
-          src={useBaseUrl('/img/shark-logo.png')}
+          src={useBaseUrl('/img/logo.svg')}
           alt="git-shark logo"
         />
         <Heading as="h1" className={styles.heroTitle}>

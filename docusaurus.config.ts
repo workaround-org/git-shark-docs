@@ -52,7 +52,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/shark-logo.png',
+    image: 'img/logo.svg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -60,7 +60,7 @@ const config: Config = {
       title: 'git-shark',
       logo: {
         alt: 'git-shark logo',
-        src: 'img/shark-logo.png',
+        src: 'img/logo.svg',
       },
       items: [
         {type: 'docSidebar', sidebarId: 'users', position: 'left', label: 'Users'},
