@@ -1,0 +1,138 @@
+/**
+ * git-shark documentation theme.
+ * Palette and typography mirror the git-shark web UI (shark.css):
+ * warm canvas, deep-teal accent, Space Grotesk + JetBrains Mono.
+ */
+
+/* self-hosted variable fonts (same files the app ships; no CDN requests) */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(/fonts/space-grotesk-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(/fonts/space-grotesk-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  /* deep-teal accent ramp (oklch 0.55 0.11 195 and friends) */
+  --ifm-color-primary: oklch(0.55 0.11 195);
+  --ifm-color-primary-dark: oklch(0.51 0.105 196);
+  --ifm-color-primary-darker: oklch(0.49 0.1 197);
+  --ifm-color-primary-darkest: oklch(0.46 0.1 198);
+  --ifm-color-primary-light: oklch(0.6 0.11 195);
+  --ifm-color-primary-lighter: oklch(0.64 0.115 195);
+  --ifm-color-primary-lightest: oklch(0.72 0.12 195);
+
+  /* surfaces + ink from the app's design system */
+  --ifm-background-color: oklch(0.985 0.004 80); /* --canvas */
+  --ifm-background-surface-color: #ffffff; /* --surface */
+  --ifm-font-color-base: oklch(0.24 0.018 205); /* --ink */
+  --ifm-color-emphasis-600: oklch(0.53 0.018 210); /* --muted */
+  --ifm-color-emphasis-300: oklch(0.9 0.01 205); /* --border */
+  --ifm-toc-border-color: oklch(0.9 0.01 205);
+  --ifm-hr-border-color: oklch(0.9 0.01 205);
+
+  /* shape + type */
+  --ifm-global-radius: 12px;
+  --ifm-code-border-radius: 8px;
+  --ifm-button-border-radius: 8px;
+  --ifm-font-family-base: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas,
+    monospace;
+  --ifm-code-font-size: 90%;
+  --ifm-heading-font-weight: 600;
+
+  --ifm-menu-color-background-active: oklch(0.96 0.028 195); /* --accent-soft */
+  --ifm-menu-color-background-hover: oklch(0.96 0.028 195);
+  --docusaurus-highlighted-code-line-bg: oklch(0.96 0.028 195);
+
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 0 oklch(0.9 0.01 205);
+  --ifm-footer-background-color: oklch(0.24 0.018 205);
+}
+
+/* dark scheme: same teal hue, lifted for contrast on a deep teal-ink canvas */
+[data-theme='dark'] {
+  --ifm-color-primary: oklch(0.72 0.12 195); /* --accent-bright */
+  --ifm-color-primary-dark: oklch(0.68 0.115 195);
+  --ifm-color-primary-darker: oklch(0.65 0.11 196);
+  --ifm-color-primary-darkest: oklch(0.6 0.11 196);
+  --ifm-color-primary-light: oklch(0.76 0.12 195);
+  --ifm-color-primary-lighter: oklch(0.79 0.115 195);
+  --ifm-color-primary-lightest: oklch(0.84 0.1 195);
+
+  --ifm-background-color: oklch(0.19 0.015 210);
+  --ifm-background-surface-color: oklch(0.23 0.016 208);
+  --ifm-font-color-base: oklch(0.92 0.006 200);
+  --ifm-color-emphasis-600: oklch(0.7 0.012 205);
+  --ifm-color-emphasis-300: oklch(0.33 0.014 207);
+  --ifm-toc-border-color: oklch(0.33 0.014 207);
+  --ifm-hr-border-color: oklch(0.33 0.014 207);
+
+  --ifm-menu-color-background-active: oklch(0.28 0.03 197);
+  --ifm-menu-color-background-hover: oklch(0.28 0.03 197);
+  --docusaurus-highlighted-code-line-bg: oklch(0.3 0.035 197);
+
+  --ifm-navbar-background-color: oklch(0.23 0.016 208);
+  --ifm-navbar-shadow: 0 1px 0 oklch(0.33 0.014 207);
+}
+
+.navbar__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.navbar__logo img {
+  border-radius: 6px;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: oklch(0.21 0.018 207);
+}
+
+/* markdown tables: card-like, matching the app's rounded surfaces */
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+}
+
+.markdown table th {
+  background: var(--ifm-menu-color-background-active);
+}

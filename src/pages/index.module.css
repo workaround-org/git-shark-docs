@@ -1,0 +1,114 @@
+.heroBanner {
+  padding: 4.5rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    var(--ifm-background-surface-color) 0%,
+    var(--ifm-background-color) 100%
+  );
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.heroLogo {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 60, 70, 0.18);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.heroTagline {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-600);
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  padding: 3rem 0;
+}
+
+.card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  padding: 1.5rem;
+  text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 16px rgba(0, 60, 70, 0.1);
+  text-decoration: none;
+}
+
+.card h3 {
+  color: var(--ifm-color-primary-darkest);
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .card h3 {
+  color: var(--ifm-color-primary-lightest);
+}
+
+.card p {
+  color: var(--ifm-font-color-base);
+  margin: 0;
+}
+
+.features {
+  padding: 0 0 4rem;
+}
+
+.featureList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureList li {
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.featureList li::before {
+  content: '›';
+  position: absolute;
+  left: 0.3rem;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+}
