@@ -85,6 +85,7 @@ const config: Config = {
           title: 'Project',
           items: [
             {label: 'git-shark instance', href: 'https://gitshark.ha1nz.de'},
+            {label: 'Source on git-shark', href: 'https://gitshark.ha1nz.de/repos/workaround/Gitshark'},
             {label: 'Source on GitHub', href: 'https://github.com/workaround-org/git-shark'},
             {label: 'ForgeFed', href: 'https://forgefed.org'},
           ],
