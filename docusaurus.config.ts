@@ -13,7 +13,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://docs.gitshark.ha1nz.de',
+  url: 'https://docs.gitshark.de',
   baseUrl: '/',
 
   organizationName: 'workaround-org',
@@ -66,7 +66,7 @@ const config: Config = {
         {type: 'docSidebar', sidebarId: 'users', position: 'left', label: 'Users'},
         {type: 'docSidebar', sidebarId: 'admins', position: 'left', label: 'Admins'},
         {type: 'docSidebar', sidebarId: 'maintainers', position: 'left', label: 'Maintainers'},
-        {href: 'https://gitshark.ha1nz.de', label: 'gitshark.ha1nz.de', position: 'right'},
+        {href: 'https://gitshark.de', label: 'gitshark.de', position: 'right'},
         {href: 'https://github.com/workaround-org/git-shark', label: 'GitHub', position: 'right'},
       ],
     },
@@ -84,8 +84,8 @@ const config: Config = {
         {
           title: 'Project',
           items: [
-            {label: 'git-shark instance', href: 'https://gitshark.ha1nz.de'},
-            {label: 'Source on git-shark', href: 'https://gitshark.ha1nz.de/repos/workaround/Gitshark'},
+            {label: 'git-shark instance', href: 'https://gitshark.de'},
+            {label: 'Source on git-shark', href: 'https://gitshark.de/repos/workaround/Gitshark'},
             {label: 'Source on GitHub', href: 'https://github.com/workaround-org/git-shark'},
             {label: 'ForgeFed', href: 'https://forgefed.org'},
           ],

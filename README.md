@@ -2,7 +2,7 @@
 
 Documentation site for [git-shark](https://github.com/workaround-org/git-shark), built with
 [Docusaurus](https://docusaurus.io/) and served at
-[docs.gitshark.ha1nz.de](https://docs.gitshark.ha1nz.de).
+[docs.gitshark.de](https://docs.gitshark.de).
 
 The content under `docs/` mirrors the audience-structured guides from the git-shark
 repository (`docs/users`, `docs/admins`, `docs/maintainers`). The theme mirrors the
@@ -38,7 +38,7 @@ linux/amd64 + linux/arm64, tags: `latest` + `sha-<commit>`).
 Deployed on the homelab cluster via Flux
 (`simple-cluster-flux/clusters/simple-cluster/apps/git-shark-docs.yaml`):
 Deployment + Service + Ingress (Traefik, cert-manager TLS) at
-`docs.gitshark.ha1nz.de`.
+`docs.gitshark.de`.
 
 ## Updating content
 
