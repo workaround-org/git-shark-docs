@@ -46,3 +46,27 @@ The source of truth for the guides is the `docs/` tree in the git-shark reposito
 edit there first (same commit as the feature change, per its `AGENTS.md`), then port
 the change here. Sidebar order lives in `sidebars.ts`; theme variables in
 `src/css/custom.css`; the landing page in `src/pages/index.tsx`.
+
+### Last sync
+
+The guides under `docs/` were last synced from git-shark commit
+[`6ef1e14`](https://github.com/workaround-org/git-shark/commit/6ef1e14) (2026-07-21).
+
+To sync again, diff the two `docs/` trees and port the changes, then bump the commit
+above (`docs/README.md` in git-shark is that repo's source-tree index and is **not**
+mirrored here — the landing page lives in `src/pages/index.tsx`):
+
+```bash
+SRC=../git-shark   # path to the git-shark checkout
+for f in $(cd "$SRC" && find docs -type f -name '*.md' ! -name README.md); do
+  diff -q "$SRC/$f" "$f" 2>/dev/null || echo "changed/new: $f"
+done
+git -C "$SRC" rev-parse HEAD   # the commit to record above after porting
+```
+
+**Site-specific transform:** `docs/users/comments.md` links to the git-shark feature
+list. In the source repo that is a repo-relative `../../README.md#features` link, which
+Docusaurus (`onBrokenMarkdownLinks: 'throw'`) cannot resolve because it escapes the docs
+plugin root — here it is rewritten to the absolute
+`https://github.com/workaround-org/git-shark#features`. Re-apply this rewrite whenever
+that file is re-synced.
